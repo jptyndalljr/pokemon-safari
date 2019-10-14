@@ -1,0 +1,112 @@
+// Customize Buefy Variables
+$color-red: #FF0000;
+$color-red-light: lighten($color-red, 10%);
+$color-red-dark: #CC0000;
+$color-blue: #3B4CCA;
+$color-blue-light: lighten($color-blue, 10%);
+$color-yellow: #FFDE00;
+$color-yellow-dark: #B3A125;
+$primary: $color-red-light;
+$link: #fff;
+$link-hover: darken($link, 10%);
+@import "~bulma/sass/utilities/_all";
+@import "~bulma";
+@import "~buefy/src/scss/buefy";
+
+// Custom variables
+$color-pokeball: $color-red;
+$color-greatball: #3b82c4;
+$color-ultraball: #fdd23c;
+$color-premierball: #fff;
+$color-masterball: #7e308e;
+$color-safariball: #aaa54c;
+
+// Color classes
+.is-red {
+  background-color: $color-red;
+}
+
+// Layout styles
+.navbar {
+  box-shadow: 0 2px 6px 2px #50505022;
+  background-color: $color-red-light;
+}
+
+.navbar-title {
+  padding-left: 0.5em;
+  display: flex;
+  align-items: center;
+
+  h1 {
+    padding-left: 0.25em;
+  }
+}
+
+.navbar-brand {
+  .navbar-item {
+    h1 {
+      margin-left: 0.5em;
+      color: $white;
+    }
+  }
+}
+
+// Card styles
+.card {
+  border-radius: 14px;
+  // width: 50%;
+  // margin: 0 auto;
+
+  .card-header {
+    border-top-left-radius: 14px;
+    border-top-right-radius: 14px;
+    box-shadow: none;
+
+    .card-header-title {
+      display: block;
+    }
+  }
+
+  .card-footer {
+    border-top: none;
+  }
+}
+
+.card {
+  &.poke-ball {
+    background-color: $color-pokeball;
+    color: $white;
+  }
+  &.great-ball {
+    background-color: $color-greatball;
+    color: $white;
+  }
+  &.ultra-ball {
+    background-color: $color-ultraball;
+    color: $grey;
+
+    .card-header {
+      .card-header-title {
+        color: $grey !important;
+      }
+    }
+  }
+  &.master-ball {
+    background-color: $color-masterball;
+    color: $white;
+  }
+  &.premier-ball {
+    background-color: $color-premierball;
+    color: $grey;
+
+    .card-header {
+      .card-header-title {
+        color: $grey !important;
+      }
+    }
+  }
+  &.safari-ball {
+    background-color: $color-safariball;
+    color: $white;
+  }
+}
